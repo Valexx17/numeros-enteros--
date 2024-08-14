@@ -1,0 +1,40 @@
+package actividad_punto2;
+
+import java.util.Scanner;
+
+
+public class Actividad_punto2 {
+
+    
+   
+    public static void main(String[] args) {
+       Scanner SC =new Scanner (System.in);
+        int[]Numeros =new int [10];
+        int a,b,negativo,positivo,cero;
+        double promedio;
+        negativo=0;
+        positivo=0;
+        cero=0;
+        for (a=0;a<10;a++){
+            System.out.println("Ingrese un numero");
+            Numeros [a]= SC.nextInt();
+        }
+        for(b=0;b<10;b++){
+         if(Numeros[b]<0){
+             negativo++;
+         }else{
+             if(Numeros[b]>0){
+                 positivo++;
+             }else{
+                 cero++;
+             }
+         }
+     }
+        promedio=(Numeros[0]+Numeros[1]+Numeros[2]+Numeros[3]+Numeros[4]+Numeros[5]+Numeros[6]+Numeros[7]+Numeros[8]+Numeros[9])/10;
+        System.out.println("el numero total de negativos es:"+negativo);
+        System.out.println("el numero total de positivos es:"+positivo);
+        System.out.println("el numero total de ceros es:"+cero);
+        System.out.println("El promedio es: "+promedio);
+    }
+    
+}
